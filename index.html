@@ -74,7 +74,6 @@
     async function getUserProfile() {
       const profile = await liff.getProfile()
       document.getElementById("pictureUrl").src = profile.pictureUrl
-      
     }
 
     function getEnvironment() {
@@ -94,7 +93,7 @@
     }
 
     async function main() {
-      // alert("LINE Developers x Skooldio")
+      alert("LINE User Pic")
       await liff.init({ liffId: "1655455050-XMdoKgQQ" })
       getEnvironment()
       getUserProfile()
