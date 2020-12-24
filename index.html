@@ -36,8 +36,8 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script>
-  <script>
+  <!-- <script src="js/vconsole.min.js"></script> -->
+  <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
   </script> -->
@@ -73,6 +73,7 @@
 
     async function getUserProfile() {
       const profile = await liff.getProfile()
+      document.getElementById("pictureUrl").src = profile.pictureUrl
       document.getElementById("userId").append(profile.userId)
       document.getElementById("displayName").append(profile.displayName)
       document.getElementById("statusMessage").append(profile.statusMessage)
@@ -94,7 +95,7 @@
         document.getElementById("btnClose").style.display = "none"
       }
     }
-
+    
     async function main() {
       alert("LINE Developers x Skooldio")
       await liff.init({ liffId: "1655455050-XMdoKgQQ" })
